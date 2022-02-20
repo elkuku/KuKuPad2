@@ -16,8 +16,26 @@ class ControllerAdminAccessTest extends WebTestCase
 {
     private array $exceptions
         = [
-            'default'                  => [
+            'wiki'                  => [
                 'statusCodes' => ['GET' => 200],
+            ],
+            'page_index'                  => [
+                'statusCodes' => ['GET' => 200],
+            ],
+            'page_show'                  => [
+                'statusCodes' => ['GET' => 200],
+            ],
+            'page_show2'                  => [
+                'statusCodes' => ['GET' => 200],
+            ],
+            'page_new'                  => [
+                'statusCodes' => ['GET' => 200, 'POST' => 200],
+            ],
+            'page_edit'                  => [
+                'statusCodes' => ['GET' => 200, 'POST' => 200],
+            ],
+            'markdown_preview'            => [
+                'statusCodes' => ['POST' => 200],
             ],
             'login'                    => [
                 'statusCodes' => ['GET' => 200],
@@ -99,7 +117,9 @@ class ControllerAdminAccessTest extends WebTestCase
             }
 
             $methods = $route->getMethods() ?: ['GET'];
-            $path = str_replace('{id}', $defaultId, $route->getPath());
+            $path = str_replace(['{id}', '{slug}'],
+                [$defaultId, 'test'],
+                $route->getPath());
             $out = false;
             foreach ($methods as $method) {
                 $expectedStatusCode = 302;
