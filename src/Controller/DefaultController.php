@@ -13,6 +13,10 @@ class DefaultController extends AbstractController
     public function index(
         string $projectDir,
     ): Response {
+        if ($this->isGranted('ROLE_READER')) {
+            return $this->redirectToRoute('wiki');
+        }
+
         return $this->render(
             'default/index.html.twig',
             [

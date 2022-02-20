@@ -9,7 +9,6 @@ use Doctrine\ORM\Mapping\Entity;
 use Doctrine\ORM\Mapping\GeneratedValue;
 use Doctrine\ORM\Mapping\Id;
 use Doctrine\ORM\Mapping\Table;
-use Serializable;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -17,7 +16,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 #[Entity(repositoryClass: UserRepository::class)]
 #[Table(name: 'system_user')]
 #[UniqueEntity(fields: 'identifier', message: 'This identifier is already in use')]
-class User implements UserInterface, Serializable
+class User implements UserInterface
 {
     public const ROLES
         = [

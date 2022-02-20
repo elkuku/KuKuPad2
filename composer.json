@@ -16,6 +16,8 @@
         "knpuniversity/oauth2-client-bundle": "^2.3",
         "league/oauth2-github": "^3.0",
         "league/oauth2-google": "^4.0",
+        "mhujer/breadcrumbs-bundle": "^1.5",
+        "michelf/php-markdown": "^1.9",
         "phpdocumentor/reflection-docblock": "^5.2",
         "sensio/framework-extra-bundle": "^6.0",
         "symfony/apache-pack": "^1.0",
@@ -47,6 +49,7 @@
         "symfony/webpack-encore-bundle": "^v1.8",
         "symfony/yaml": "6.*",
         "twig/extra-bundle": "^3.0",
+        "twig/markdown-extra": "^3.3",
         "twig/twig": "^3.0"
     },
     "require-dev": {
@@ -105,9 +108,9 @@
             "@translate-all"
         ],
         "translate-all": {
-            "en": "./bin/console translation:update --output-format=yaml --domain=messages --force en",
-            "es": "./bin/console translation:update --output-format=yaml --domain=messages --force es",
-            "de": "./bin/console translation:update --output-format=yaml --domain=messages --force de"
+            "en": "./bin/console translation:extract --format=yaml --domain=messages --force en",
+            "es": "./bin/console translation:extract --format=yaml --domain=messages --force es",
+            "de": "./bin/console translation:extract --format=yaml --domain=messages --force de"
         }
     },
     "conflict": {

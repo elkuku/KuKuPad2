@@ -148,6 +148,12 @@
     "league/oauth2-google": {
         "version": "4.0.0"
     },
+    "mhujer/breadcrumbs-bundle": {
+        "version": "1.5.8"
+    },
+    "michelf/php-markdown": {
+        "version": "1.9.1"
+    },
     "monolog/monolog": {
         "version": "2.3.5"
     },
@@ -712,6 +718,9 @@
     },
     "twig/extra-bundle": {
         "version": "v3.3.4"
+    },
+    "twig/markdown-extra": {
+        "version": "v3.3.8"
     },
     "twig/twig": {
         "version": "v3.3.4"

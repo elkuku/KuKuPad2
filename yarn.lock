@@ -2296,6 +2296,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"codemirror-spell-checker@npm:*":
+  version: 1.1.2
+  resolution: "codemirror-spell-checker@npm:1.1.2"
+  dependencies:
+    typo-js: "*"
+  checksum: 5d4c95093cb1fc6e01a02fdb508f31692fbf3f7bec4708e2cd306d70c03ef272c15f1da272a4c9ba91a7e11728f31dcb70724865e6cec384903a056daf35aa4b
+  languageName: node
+  linkType: hard
+
+"codemirror@npm:*":
+  version: 5.65.1
+  resolution: "codemirror@npm:5.65.1"
+  checksum: 2458588b39de87e4c0c6dc661b1b22c24a53f479783b1a53ba1bc5d5aa45fa430c36dd8df464160453a8b9c683c1af59962c9d98020ddb54bbc35bd458d400c9
+  languageName: node
+  linkType: hard
+
 "color-convert@npm:^1.9.0, color-convert@npm:^1.9.1":
   version: 1.9.3
   resolution: "color-convert@npm:1.9.3"
@@ -3817,6 +3833,13 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
+"highlight.js@npm:^11.0.1":
+  version: 11.4.0
+  resolution: "highlight.js@npm:11.4.0"
+  checksum: e3da64bfca38ea67a447bf0213b80cef30b9328f1e45ccb191434f26bb024836dc1776792f060903e7ec4170abac027b37c123126e53a591c6d852c0eec51195
+  languageName: node
+  linkType: hard
+
 "hotkeys-js@npm:>=3, hotkeys-js@npm:^3.8.7":
   version: 3.8.7
   resolution: "hotkeys-js@npm:3.8.7"
@@ -4590,6 +4613,15 @@ fsevents@~2.3.2:
   dependencies:
     semver: ^6.0.0
   checksum: 54b6f186c209c1b133d0d1710e6b04c41ebfcb0dac699e5a369ea1223f22c0574ef820b91db37cae6c245f5bda8aff9bfec94f6c23e7d75970446b34a58a79b0
+  languageName: node
+  linkType: hard
+
+"marked@npm:*":
+  version: 4.0.12
+  resolution: "marked@npm:4.0.12"
+  bin:
+    marked: bin/marked.js
+  checksum: b026d6dc5ab8beb6fbb3bac6d20061aa1d845b8668a077797a1fd985c973da7be819c6fd29f7054d0d644a1ba32bd4fa4789b8cb254b299e7bf4ad3629f63560
   languageName: node
   linkType: hard
 
@@ -6169,10 +6201,12 @@ fsevents@~2.3.2:
     bootswatch: ^5.1.3
     core-js: ^3.21.0
     file-loader: ^6.2.0
+    highlight.js: ^11.0.1
     hotkeys-js: ^3.8.7
     jquery: ^3.6.0
     open-iconic: ^1.1.1
     regenerator-runtime: ^0.13.9
+    simplemde: ^1.11.2
     stimulus-use: beta
     sweetalert2: ^11.3.10
     webpack-notifier: ^1.15.0
@@ -6421,6 +6455,17 @@ fsevents@~2.3.2:
   dependencies:
     is-arrayish: ^0.3.1
   checksum: a5a2c1c86cea94f42ab843508e7c68b5bbfd15acb08056d600ac2e9c7f7c41bc417e71160ea3034a5411d3cce186c801f7a56badfb3a854906ce163120318875
+  languageName: node
+  linkType: hard
+
+"simplemde@npm:^1.11.2":
+  version: 1.11.2
+  resolution: "simplemde@npm:1.11.2"
+  dependencies:
+    codemirror: "*"
+    codemirror-spell-checker: "*"
+    marked: "*"
+  checksum: 09b2acb36e6bd807f842a60b4f8304518d37b26074b2f342e002c2ba0ddb0ddcbef5124f472d681a5fac17b9cc2100411b0ae35d580466a61ee68c53aa9cbd4b
   languageName: node
   linkType: hard
 
@@ -6897,6 +6942,13 @@ fsevents@~2.3.2:
   version: 2.3.0
   resolution: "type@npm:2.3.0"
   checksum: e4976037e71df2550cbd84a5e3ff764f3706ebcb21b7c10deb671db5a2d58468cc6604633cf480b816d7649832d9d78a5edad40019b0fa48051e5f3d4bcc8038
+  languageName: node
+  linkType: hard
+
+"typo-js@npm:*":
+  version: 1.2.1
+  resolution: "typo-js@npm:1.2.1"
+  checksum: 7de16c01c2a0c46c76b8e31f0ea32072f67e87bde7285e9bac6b1fa71945b38b8616f1bfcf122c3ae14a51aa0ce7b4f9c662c0caf3e26be9b01803f99afaf8f9
   languageName: node
   linkType: hard
 

@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }}{{ page.title == 'default' ? '' : ' - ' ~page.title }}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('page') }}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('page') }}
+{% endblock %}
+
+{% block body %}
+    {{ wo_render_breadcrumbs() }}
+    {% if is_granted('ROLE_EDITOR') %}
+        <div class="btn-group float-end">
+            <a class="btn btn-outline-info btn-sm" href="{{ path('page_edit', {'id': page.id}) }}">{{ 'Edit'|trans }}</a>
+            {{ include('page/_delete_form.html.twig') }}
+        </div>
+    {% endif %}
+
+    {% if page.title == 'default' %}
+        <h2>{{ default_name ?? 'Wiki' }}</h2>
+    {% else %}
+        <h2>{{ page.title }}</h2>
+    {% endif %}
+
+    {{ page.text|md2html }}
+{% endblock %}
