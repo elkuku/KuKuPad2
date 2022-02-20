@@ -13,7 +13,7 @@ use Symfony\Component\Routing\Annotation\Route;
 #[Route(path: '/markdown')]
 class Markdown extends AbstractController
 {
-    #[Route(path: '/preview', name: 'markdown_preview')]
+    #[Route(path: '/preview', name: 'markdown_preview', methods: 'POST')]
     #[IsGranted('ROLE_EDITOR')]
     public function preview(
         Request $request,
@@ -29,7 +29,7 @@ class Markdown extends AbstractController
         );
     }
 
-    #[Route(path: '/clearcache', name: 'markdown_clear_cache')]
+    #[Route(path: '/clearcache', name: 'markdown_clear_cache', methods: ['GET'])]
     #[IsGranted('ROLE_EDITOR')]
     public function clearCache(
         MarkdownHelper $markdownHelper

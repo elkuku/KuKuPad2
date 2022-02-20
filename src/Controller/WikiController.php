@@ -11,7 +11,7 @@ use Symfony\Component\Routing\Annotation\Route;
 #[Route(path: '/wiki')]
 class WikiController extends AbstractController
 {
-    #[Route(path: '/{slug}', name: 'wiki', defaults: ['slug' => 'default'])]
+    #[Route(path: '/{slug}', name: 'wiki', defaults: ['slug' => 'default'], methods: ['GET'])]
     #[IsGranted('ROLE_READER')]
     public function wiki(
         PageRepository $pageRepository,
