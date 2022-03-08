@@ -16,7 +16,7 @@
         "regenerator-runtime": "^0.13.9",
         "simplemde": "^1.11.2",
         "stimulus-use": "beta",
-        "sweetalert2": "^11.4.2",
+        "sweetalert2": "^11.4.4",
         "webpack-notifier": "^1.15.0"
     },
     "license": "UNLICENSED",

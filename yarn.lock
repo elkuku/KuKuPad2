@@ -6208,7 +6208,7 @@ fsevents@~2.3.2:
     regenerator-runtime: ^0.13.9
     simplemde: ^1.11.2
     stimulus-use: beta
-    sweetalert2: ^11.4.2
+    sweetalert2: ^11.4.4
     webpack-notifier: ^1.15.0
   languageName: unknown
   linkType: soft
@@ -6776,10 +6776,10 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"sweetalert2@npm:^11.4.2":
-  version: 11.4.2
-  resolution: "sweetalert2@npm:11.4.2"
-  checksum: a53541ada9ef7fa7315175fa6460b26f925e8e4bdd72255efcbfaa8ac3fdb4925ed250d433ab742cde94006499962acccabac51507783bb74fee8c72f94ea532
+"sweetalert2@npm:^11.4.4":
+  version: 11.4.4
+  resolution: "sweetalert2@npm:11.4.4"
+  checksum: bd4422079b27da62b9f7e21de68c454999397f3ca07982d671a381a7da992dd491b016ee1432278abbdf69d8123bbccb476ead3880e60d0a2c1947bbf3d99ab0
   languageName: node
   linkType: hard
 
