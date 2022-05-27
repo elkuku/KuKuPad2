@@ -10,9 +10,8 @@ use Symfony\Component\Routing\Annotation\Route;
 class DefaultController extends AbstractController
 {
     #[Route('/', name: 'default', methods: ['GET'])]
-    public function index(
-        string $projectDir,
-    ): Response {
+    public function index(string $projectDir): Response
+    {
         if ($this->isGranted('ROLE_READER')) {
             return $this->redirectToRoute('wiki');
         }
