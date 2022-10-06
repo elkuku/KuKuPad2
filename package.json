@@ -1,5 +1,7 @@
 {
     "devDependencies": {
+        "@babel/core": "^7.17.0",
+        "@babel/preset-env": "^7.16.0",
         "@hotwired/stimulus": "^3.1.0",
         "@popperjs/core": "^2.11.6",
         "@symfony/stimulus-bridge": "^3.2.1",
@@ -17,6 +19,8 @@
         "simplemde": "^1.11.2",
         "stimulus-use": "^0.50.0",
         "sweetalert2": "^11.4.37",
+        "webpack": "^5.74.0",
+        "webpack-cli": "^4.10.0",
         "webpack-notifier": "^1.15.0"
     },
     "license": "UNLICENSED",
