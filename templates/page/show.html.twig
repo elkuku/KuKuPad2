@@ -27,5 +27,9 @@
         <h2>{{ page.title }}</h2>
     {% endif %}
 
+    <p class="text-bg-light p-2">
+        Created: {{ page.createdAt|ago }} - Updated: {{ page.updatedAt|ago }}
+    </p>
+
     {{ page.text|md2html }}
 {% endblock %}
