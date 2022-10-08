@@ -3,16 +3,19 @@
 namespace App\Entity;
 
 use Doctrine\DBAL\Types\Types;
-use Doctrine\ORM\Mapping as ORM;
 use Doctrine\ORM\Mapping\Column;
 use Doctrine\ORM\Mapping\Entity;
 use Doctrine\ORM\Mapping\GeneratedValue;
 use Doctrine\ORM\Mapping\Id;
 use App\Repository\PageRepository;
+use Gedmo\Mapping\Annotation\Slug;
+use Gedmo\Timestampable\Traits\TimestampableEntity;
 
 #[Entity(repositoryClass: PageRepository::class)]
 class Page
 {
+    use TimestampableEntity;
+
     #[Id, GeneratedValue(strategy: 'AUTO')]
     #[Column(type: Types::INTEGER)]
     private ?int $id = null;
@@ -20,8 +23,9 @@ class Page
     #[Column(type: Types::STRING, length: 255)]
     private ?string $title = '';
 
-    #[Column(type: Types::STRING, length: 255, nullable: true)]
-    private ?string $slug = '';
+    #[Column(type: Types::STRING, length: 255, unique: true)]
+    #[Slug(fields: ['title'])]
+    private ?string $slug;
 
     #[Column(type: Types::TEXT)]
     private ?string $text = '';
@@ -48,12 +52,6 @@ class Page
         return $this->slug;
     }
 
-    public function setSlug(?string $slug): self
-    {
-        $this->slug = $slug;
-
-        return $this;
-    }
 
     public function getText(): ?string
     {

@@ -44,7 +44,6 @@ class PageController extends AbstractController
         $form = $this->createForm(PageType::class, $page);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
-            $page->setSlug(Slugger::slugify($page->getTitle()));
             $entityManager->persist($page);
             $entityManager->flush();
 
@@ -98,8 +97,6 @@ class PageController extends AbstractController
         $form = $this->createForm(PageType::class, $page);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
-            $page->setSlug(Slugger::slugify($page->getTitle()));
-
             $entityManager->flush();
 
             return $this->redirectToRoute('wiki', ['slug' => $page->getSlug()]);
